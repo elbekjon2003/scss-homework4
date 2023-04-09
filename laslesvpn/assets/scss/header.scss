@@ -1,0 +1,106 @@
+@import "./variables.scss";
+
+header{
+    height: 100px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    position: relative;
+    .logo{
+        width: 150px;
+    }
+    label{
+        display: none;
+        font-size: 25px;
+        @media(max-width:940px){
+            display: block;
+        }
+    }
+    #check{
+        display: none;
+        &:checked ~ .nav-links{
+            transform: translateX(0);
+        }
+    }
+    .nav-links{
+        display: flex;
+        align-items: center;
+        gap: 150px;
+        z-index: 10;
+        @media(max-width:1250px){
+            gap: 50px;
+        }
+        @media(max-width:940px){
+            position: fixed;
+            background-color: #fff;
+            width: 60%;
+            height: calc(100vh - 100px);
+            left: 0;
+            top: 100px;
+            flex-direction: column;
+            // align-items: flex-start;
+            justify-content: center;
+            padding: 0 60px;
+            transition: all 0.4s ease-in-out;
+            transform: translateX(-100%);
+        }
+        @media(max-width:450px){
+            width: 100%;
+        }
+        ul{
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            @media(max-width:1250px){
+                gap: 20px;
+            }
+            @media(max-width:940px){
+                flex-direction: column;
+            }
+            li{
+                font-size: 16px;
+                line-height: 19px;
+                color: $kulrangsifat;
+                &:hover{
+                    color: #000;
+                }
+            }
+        }
+        .nav-btns{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            @media(max-width:940px){
+                flex-direction: column;
+                // align-items: flex-start;
+            }
+            h3{
+                font-size: 16px;
+                line-height: 19px;
+                color: $qora;
+                cursor: pointer;
+            }
+            button{
+                font-size: 16px;
+                line-height: 19px;
+                padding: 13px 45px;
+                color: $bardoviy;
+                border: 1px solid $bardoviy;
+                border-radius: 50px;
+                background-color: transparent;
+                transition: 0.3s;
+                &:hover{
+                    background-color: $bardoviy;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

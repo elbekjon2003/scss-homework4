@@ -1,0 +1,121 @@
+@import "./variables.scss";
+
+.showcase{
+    padding: 40px 0;
+    @media(max-width:500px){
+        padding: 20px 0;
+    }
+    .showcase-main{
+        display: flex;
+        align-items: center;
+        @media(max-width:1010px){
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+}
+.showcase-desc{
+    width: 555px;
+    @media(max-width:640px){
+        width: auto;
+    }
+    h1{
+        font-size: 50px;
+        line-height: 70px;
+        color: $qora;
+        @media(max-width:1170px){
+            font-size: 44px;
+            line-height: 60px;
+        }
+        @media(max-width:500px){
+            font-size: 36px;
+            line-height: 54px;
+        }
+    }
+    p{
+        font-size: 16px;
+        line-height: 30px;
+        color: $kulrangsifat;
+        margin-top: 20px;
+    }
+    button{
+        padding: 17.5px 77.5px;
+        color: $bardoviy;
+        background-color: transparent;
+        border-radius: 10px;
+        border: 1px solid $bardoviy;
+        transition: 0.3s;
+        margin-top: 50px;
+        &:hover{
+            color: #fff;
+            background-color: $bardoviy;
+        }
+    }
+}
+.showcase-img{
+    width: 580px;
+    @media(max-width:640px){
+        width: auto;
+    }
+}
+
+.showcase-cards{
+    margin-top: 50px;
+    padding: 30px 0;
+    display: flex;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 14px 5px #EEEFF2;
+    @media(max-width:750px){
+        flex-direction: column;
+        width: auto;
+        margin: 50px auto;
+    }
+    .showcase-card{
+        width: calc(100% / 3);
+        display: flex;
+        gap: 35px;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+        &:nth-of-type(2){
+            border-left: 2px solid #EEEFF2;
+            border-right: 2px solid #EEEFF2;
+        }
+        @media(max-width:750px){
+            width: 200px;
+            margin: 0 auto;
+            align-items: unset;
+            justify-content: unset;
+            &:nth-of-type(2){
+                border: none;
+            }
+        }
+        .card-icon{
+            width: 55px;
+            height: 55px;
+            background-color: $pushti;
+            border: none;
+            border-radius: 70px;
+            display: grid;
+            place-items: center;
+            i{
+                font-size: 25px;
+                color: $bardoviy;
+            }
+        }
+        .icon-desc{
+            h4{
+                font-size: 25px;
+                line-height: 30px;
+                color: $qora;
+            }
+            p{
+                font-size: 20px;
+                line-height: 30px;
+                margin-top: 5px;
+                color: $kulrangsifat;
+            }
+        }
+    }
+}

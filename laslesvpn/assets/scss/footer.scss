@@ -1,0 +1,128 @@
+@import "./variables.scss";
+
+footer{
+    background-color: #F8F8F8;
+}
+
+.subscribe{
+    padding: 50px 70px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-130px);
+    @media(max-width:850px){
+        flex-direction: column;
+        gap: 30px;
+    }
+    @media(max-width:500px){
+        padding: 20px 30px;
+    }
+    .left-part{
+        width: 370px;
+        @media(max-width:500px){
+            width: auto;
+        }
+        h1{
+            font-size: 35px;
+            line-height: 45px;
+            @media(max-width:500px){
+                font-size: 26px;
+                line-height: 34px;
+            }
+        }
+        p{
+            font-size: 16px;
+            line-height: 30px;
+            color: $kulrangsifat;
+            margin-top: 20px;
+        }
+    }
+    button{
+        font-size: 16px;
+        line-height: 25px;
+        padding: 17.5px 65px;
+        color: #fff;
+        background-color: $bardoviy;
+        border-radius: 10px;
+        border: none;
+        @media(max-width:360px){
+            padding: 16px 30px;
+        }
+    }
+}
+.footer-main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -60px;
+    padding-bottom: 40px;
+    @media(max-width:900px){
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
+.logo-content{
+    img{
+        width: 150px;
+    }
+    p{
+        margin-top: 20px;
+        width: 340px;
+        font-size: 16px;
+        line-height: 30px;
+        color: $kulrangsifat;
+        @media(max-width:370px){
+            width: auto;
+        }
+    }
+    .socials{
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+        .icon{
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            background-color: #fff;
+            border-radius: 50%;
+            i{
+                font-size: 15px;
+                color: $bardoviy;
+            }
+        }
+    }
+    .copy{
+        p{
+            color: #AFB5C0;
+        }
+    }
+}
+
+.footer-links{
+    display: flex;
+    gap: 130px;
+    @media(max-width:1100px){
+        gap: 60px;
+    }
+    @media(max-width:450px){
+        flex-direction: column;
+        gap: 20px;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+        a{
+            font-size: 16px;
+            line-height: 30px;
+            color: $kulrangsifat;
+            margin-bottom: 10px;
+        }
+    }
+}

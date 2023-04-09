@@ -1,0 +1,108 @@
+@import "./variables.scss";
+
+.plan-main{
+    padding: 80px 0;
+    &>h1{
+        font-size: 35px;
+        line-height: 50px;
+        color: $qora;
+        text-align: center;
+    }
+    &>p{
+        font-size: 16px;
+        line-height: 30px;
+        color: $kulrangsifat;
+        width: 555px;
+        margin: 20px auto 0;
+        text-align: center;
+        @media(max-width:620px){
+            width: auto;
+        }
+    }
+}
+
+.plan-cards{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    @media(max-width:800px){
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.plan-card{
+    width: 330px;
+    height: 760px;
+    border: 2px solid #DDDDDD;
+    border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media(max-width:990px){
+        padding: 20px;
+    }
+    @media(max-width:400px){
+        width: 250px;
+    }
+    .card-top{
+        text-align: center;
+        img{
+            width: 144px;
+            margin: 0 auto;
+        }
+        h2{
+            font-size: 18px;
+            line-height: 30px;
+            margin-top: 30px;
+        }
+        ul{
+            margin: auto;
+            margin-top: 30px;
+            text-align: start;
+            li{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                margin-bottom: 10px;
+                i{
+                    color: $yashil;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 30px;
+                    color: $kulrangsifat;
+                }
+            }
+        }
+    }
+    .card-bottom{
+        text-align: center;
+        h1{
+            font-size: 25px;
+            line-height: 30px;
+            color: $qora;
+            span{
+                color: $kulrangsifat;
+                font-weight: 400;
+            }
+        }
+        button{
+            font-size: 16px;
+            line-height: 19px;
+            color: $bardoviy;
+            padding: 13px 63px;
+            border: 1px solid $bardoviy;
+            border-radius: 50px;
+            background-color: transparent;
+            margin-top: 20px;
+            transition: 0.3s;
+            &:hover{
+                background-color: $bardoviy;
+                color: #fff;
+            }
+        }
+    }
+}

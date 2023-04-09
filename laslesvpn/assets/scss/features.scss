@@ -1,0 +1,51 @@
+@import "./variables.scss";
+
+.features-main{
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media(max-width:1050px){
+        flex-direction: column;
+        row-gap: 50px;
+        padding: 40px 0;
+    }
+    .features-img{
+        width: 500px;
+        @media(max-width: 550px){
+            width: auto;
+        }
+    }
+    .features-desc{
+        width: 420px;
+        @media(max-width:550px){
+            width: auto;
+        }
+        h1{
+            font-size: 35px;
+            line-height: 50px;
+            color: $qora;
+        }
+        &>p{
+            font-size: 16px;
+            line-height: 30px;
+            color: $kulrangsifat;
+            margin-top: 20px;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 15px;
+            i{
+                font-size: 20px;
+                color: $yashil;
+            }
+            p{
+                font-size: 14px;
+                line-height: 30px;
+                color: $kulrangsifat;
+            }
+        }
+    }
+}
